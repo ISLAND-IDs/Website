@@ -1,12 +1,24 @@
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet, Link, useLocation } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
+import TranslateButton from './language/translate_button.tsx';
+import './style.scss';
 
 function App() {
+  const location = useLocation();
+  const { t } = useTranslation();
+  const path = location.pathname;
+
   return (
     <div>
       <header>
-        <nav>
-          <Link to="/">홈</Link>
-          <Link to="/about">회사 소개</Link>
+        <nav className="container">
+          <div className="logo">ISLAND</div>
+          <div className="nav-menu">
+            <Link to="/" className={"nav-link "+(path=="/"?"active":"")}>{t("home")}</Link>
+            <Link to="/submission" className={"nav-link "+(path=="/submission"?"active":"")}>{t("submit_id")}</Link>
+            <Link to="/about" className={"nav-link "+(path=="/about"?"active":"")}>{t("about_island")}</Link>
+            <TranslateButton></TranslateButton>
+          </div>
         </nav>
       </header>
       <main>
@@ -14,8 +26,12 @@ function App() {
         <Outlet />
       </main>
       <footer>
-        <p>Copyright © 2025</p>
-      </footer>
+        <div className="container">
+            <div className="footer-content">
+                <p data-ko="© 2025 ISLAND 레이블. 모든 권리 보유." data-en="© 2025 ISLAND Label. All Rights Reserved.">© 2025 ISLAND 레이블. 모든 권리 보유.</p>
+            </div>
+        </div>
+    </footer>
     </div>
   );
 }

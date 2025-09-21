@@ -1,9 +1,18 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: #191919;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    margin: 0px;
+}
+
 header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.9);
+    background: #191919;
     backdrop-filter: blur(20px);
     z-index: 1000;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -12,5 +21,75 @@ header {
         max-width: 1400px;
         margin: 0 auto;
         padding: 0 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+
+        .logo {
+            font-size: 28px;
+            font-weight: 300;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+
+            .nav-link {
+                color: #fff;
+                text-decoration: none;
+                font-size: 14px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                transition: opacity 0.3s ease;
+                position: relative;
+
+                &:hover {
+                    opacity: 0.6;
+                }
+
+                &.active::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0;
+                    width: 100%;
+                    height: 1px;
+                    background: #fff;
+                }
+            }
+
+            .language-toggle {
+                background: none;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                color: #fff;
+                padding: 8px 16px;
+                font-size: 12px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background: rgba(255, 255, 255, 0.1);
+                }
+            }
+        }
     }
+}
+
+footer {
+    padding: 60px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.footer-content {
+    font-size: 12px;
+    opacity: 0.4;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }

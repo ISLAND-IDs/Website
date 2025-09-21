@@ -1,0 +1,27 @@
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url("../asset/island.jpg");
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.6); // 어두운 오버레이
+    background-blend-mode: overlay;
+
+    h1 {
+        font-size: clamp(60px, 8vw, 120px);
+        font-weight: 100;
+        letter-spacing: 12px;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+    }
+    
+    p {
+        font-size: 18px;
+        font-weight: 300;
+        letter-spacing: 2px;
+        opacity: 0.7;
+        text-transform: uppercase;
+    }
+}

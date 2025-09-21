@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App'; // 최상위 레이아웃 컴포넌트, 공통 레이아웃
-import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
+import HomePage from './pages/Home';
+import SubmitPage from './pages/id_submit';
 
 const router = createBrowserRouter([
   {
@@ -11,7 +11,8 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       { index: true, element: <HomePage /> },
-      { path: 'about', element: <AboutPage /> },
+      { path: 'submission', element: <SubmitPage /> },
+      // { path: 'about', element: <AboutPage /> },
     ],
   },
 ]);
