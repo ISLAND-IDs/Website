@@ -1,5 +1,5 @@
 import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
+import { initReactI18next, useTranslation } from "react-i18next";
 import en from "./en.json";
 import ko from "./ko.json";
 
@@ -16,8 +16,8 @@ i18n
     },
     lng: "ko-KR",
     fallbackLng: {
-      default: ["ko-KR"],
-      "en-US": ["en-US"],
+      "ko-KR": ["ko-KR"],
+      default: ["en-US"],
     },
     debug: true,
     defaultNS: "translation",
@@ -31,4 +31,15 @@ i18n
     },
   });
 
-export default i18n;
+function TranslateButton() {
+  const { t } = useTranslation();
+  const onChangeLang = () => {
+    i18n.language === "ko"
+      ? i18n.changeLanguage("en")
+      : i18n.changeLanguage("ko");
+  };
+  
+  return (<button className="language-toggle" onClick={() => onChangeLang()}>{t("change_language")}</button>)
+}
+
+export default TranslateButton;
