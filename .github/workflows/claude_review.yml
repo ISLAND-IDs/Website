@@ -1,27 +1,31 @@
-- name: Claude Code Action Official
-  uses: anthropics/claude-code-action@v1
-  with:
-    trigger_phrase: "@claude"  # 선택 사항, 기본값은 @claude
-    assignee_trigger: ""       # 선택 사항
-    label_trigger: "claude"    # 선택 사항, 기본값은 claude
-    base_branch: ""            # 선택 사항
-    branch_prefix: "claude/"   # 선택 사항, 기본값은 claude/
-    model: ""                  # 선택 사항
-    anthropic_model: ""        # 선택 사항
-    fallback_model: ""         # 선택 사항
-    allowed_tools: []          # 선택 사항, 기본값은 []
-    disallowed_tools: []       # 선택 사항, 기본값은 []
-    custom_instructions: ""    # 선택 사항
-    direct_prompt: ""          # 선택 사항
-    mcp_config: "{}"           # 선택 사항
-    additional_permissions: "" # 선택 사항, 기본값은 ""
-    claude_env: ""             # 선택 사항, 기본값은 ""
-    anthropic_api_key: ""      # 선택 사항
-    claude_code_oauth_token: ""# 선택 사항
-    github_token: ""           # 선택 사항
-    use_bedrock: false         # 선택 사항, 기본값은 false
-    use_vertex: false          # 선택 사항, 기본값은 false
-    max_turns: ""              # 선택 사항
-    timeout_minutes: 30        # 선택 사항, 기본값은 30
-    use_sticky_comment: false  # 선택 사항, 기본값은 false
-    use_commit_signing: false  # 선택 사항, 기본값은 false
+name: Claude Code Action
+
+on:
+  issue_comment:
+    types: [created]
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  claude-code-action:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Claude Code Action Official
+        uses: anthropics/claude-code-action@v0.0.31
+        with:
+          trigger_phrase: "@claude"  # 이 문구를 포함한 주석에서 트리거가 발생합니다.
+          label_trigger: "claude"    # 라벨을 기준으로 트리거를 걸 수 있습니다.
+          branch_prefix: "claude/"   # 브랜치 이름에 붙을 접두어입니다.
+          timeout_minutes: 30        # 실행 타임아웃을 30분으로 설정합니다.
+          use_sticky_comment: true   # 한 개의 고정된 댓글로 결과를 남깁니다.
+          use_commit_signing: false  # 커밋 서명은 사용하지 않습니다.
+          use_bedrock: false         # Amazon Bedrock 사용 안 함.
+          use_vertex: false          # Google Vertex AI 사용 안 함.
+          
+          # 필수 API 키가 필요한 경우 GitHub Secrets에서 키를 참조하세요.
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          # github_token: ${{ secrets.GITHUB_TOKEN }}
