@@ -3,8 +3,8 @@ name: Claude Code Action
 on:
   issue_comment:
     types: [created]
-  pull_request:
-    types: [opened, synchronize, reopened]
+  pull_request_review_comment:
+    types: [created]
 
 permissions:
   id-token: write  # 이 부분 추가
