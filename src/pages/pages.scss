@@ -25,3 +25,20 @@
         text-transform: uppercase;
     }
 }
+
+.submit_form {
+    margin-top: 100px;
+    width: 100%;
+
+    iframe {
+        width: 80%;
+        margin-left: 10%;
+        height: 1500px;
+        border: none;
+
+        @media (max-width: 768px) {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+}

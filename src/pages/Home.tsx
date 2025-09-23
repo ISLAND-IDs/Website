@@ -6,12 +6,17 @@ function HomePage(){
     const { t } = useTranslation();
     
     return (
-        <section className="hero">
-            <div className="hero-content">
-                <h1>ISLAND</h1>
-                <p>{t("sub_title")}</p>
-            </div>
-        </section>
+        <div>
+            <section className="hero">
+                <div className="hero-content">
+                    <h1>ISLAND</h1>
+                    <p>{t("sub_title")}</p>
+                </div>
+            </section>
+            <section className="ID-list">
+
+            </section>
+        </div>
     )
 }
 
