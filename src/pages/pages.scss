@@ -1,4 +1,4 @@
-.hero {
+.hero { //home
     height: 100vh;
     display: flex;
     align-items: center;
@@ -26,8 +26,21 @@
     }
 }
 
+.ID-list{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 400px !important;
+    }
+}
+
 .submit_form {
-    margin-top: 100px;
+    background-color: azure;
+    margin-top: 85px;
     width: 100%;
 
     iframe {
@@ -41,4 +54,9 @@
             margin-left: 0;
         }
     }
+}
+
+.about {
+    margin-top: 85px;
+    width: 100%;
 }

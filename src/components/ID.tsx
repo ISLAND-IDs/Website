@@ -1,9 +1,11 @@
-type Props = {
-  Song_Name?: string;
-  Artist_Name?: string;
-  Cover_Art?: string;
-};
+import "./componets.scss";
 
+type Props = {
+  Song_Name: string;
+  Artist_Name: string;
+  Cover_Art: string;
+};
+// TODO: 사클 API로 곡 데이터 만으로도 커버 아트 가져올 수 있게 바꾸기
 function ID({ Song_Name, Artist_Name, Cover_Art}: Props) {
   return (
     <div className="release-card">
