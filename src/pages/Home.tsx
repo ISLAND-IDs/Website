@@ -1,13 +1,15 @@
 import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import ID from "../components/ID";
+import Song_card from "../components/song_card";
 import 'swiper/swiper.css';
 import "./pages.scss";
 import { EffectCoverflow, Pagination } from 'swiper/modules';
+import releases from '../releases.json';
 
 function HomePage(){
     //API를 써서 리스트 가져오기?
     const { t } = useTranslation();
+    console.log(releases);
     
     return (
       <div>
@@ -17,8 +19,8 @@ function HomePage(){
             <p>{t("sub_title")}</p>
           </div>
         </section>
-        <section className="list">
-          <h2 className="section-title">{t("latest_releases")}</h2>
+        <section className="releases">
+          <h2 className="section-title">{t("releases")}</h2>
           <Swiper
             effect={'coverflow'}
             grabCursor={true}
@@ -33,20 +35,14 @@ function HomePage(){
             }}
             pagination={true}
             modules={[EffectCoverflow, Pagination]}
-            className="ID-list"
+            className="list"
           >
-            <SwiperSlide>
-              <ID Song_Name="Dance VIP" Artist_Name="rrayy" Cover_Art="https://i1.sndcdn.com/artworks-iaMIZrXjJXGWNzuz-MkkI4g-t1080x1080.jpg"/>
-            </SwiperSlide>
-            <SwiperSlide>
-              <ID Song_Name="Dance VIP (Extended Mix)" Artist_Name="rrayy" Cover_Art="https://i1.sndcdn.com/artworks-iaMIZrXjJXGWNzuz-MkkI4g-t1080x1080.jpg"/>
-            </SwiperSlide>
-            <SwiperSlide>
-              <ID Song_Name="What I do" Artist_Name="rrayy" Cover_Art="	https://i1.sndcdn.com/artworks-AiPihJyNUlzjqg8r-EHsWvw-t1080x1080.png"/>
-            </SwiperSlide>
-            <SwiperSlide>
-              <ID Song_Name="Next to Me" Artist_Name="rrayy" Cover_Art="https://i1.sndcdn.com/artworks-XRO8yDzyLye6vppf-fXMCyw-t1080x1080.jpg"/>
-            </SwiperSlide>
+            {releases.map((song, idx) => (
+              console.log("song"),
+              <SwiperSlide key={idx}>
+                <Song_card {...song} />
+              </SwiperSlide>
+            ))}
           </Swiper>
         </section>
       </div>
