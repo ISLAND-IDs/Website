@@ -26,15 +26,21 @@
     }
 }
 
-.list{
-    display: flex;
-    align-items: center;
-    padding: 10px;
+section {
+    .section-title {
+        margin-left: 30px;
+    }
 
-    .swiper-slide {
-        background-position: center;
-        background-size: cover;
-        width: 400px !important;
+    .list{
+        display: flex;
+        align-items: center;
+        padding: 10px;
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 400px !important;
+        }
     }
 }
 

@@ -40,12 +40,12 @@ function About() {
                 </div>
                 <div className="team-section">
                     <div className="team-role">A&R Team</div>
-                    <a className="team-member" href="https://linktr.ee/speedymusic">🎵 Speedy</a>
-                    <a className="team-member" href="https://music.hexa.cat/">🎵 hexa.cat</a>
+                    <a className="team-member" href="https://linktr.ee/speedymusic" target='_blank'>🎵 Speedy</a>
+                    <a className="team-member" href="https://music.hexa.cat/" target='_blank'>🎵 hexa.cat</a>
                 </div>
                 <div className="team-section">
                     <div className="team-role">Development Team</div>
-                    <a className="team-member" href="https://litt.ly/soundsmell">💻 Soundsmell</a>
+                    <a className="team-member" href="https://litt.ly/soundsmell" target='_blank'>💻 Soundsmell</a>
                 </div>
             </div>
         </div>

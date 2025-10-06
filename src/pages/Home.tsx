@@ -22,10 +22,10 @@ function HomePage(){
         <section className="releases">
           <h2 className="section-title">{t("releases")}</h2>
           <Swiper
-            effect={'coverflow'}
+            effect={"coverflow"}
             grabCursor={true}
             centeredSlides={true}
-            slidesPerView={'auto'}
+            slidesPerView={"auto"}
             coverflowEffect={{
               rotate: 50,
               stretch: 0,
@@ -37,13 +37,26 @@ function HomePage(){
             modules={[EffectCoverflow, Pagination]}
             className="list"
           >
-            {releases.map((song, idx) => (
-              console.log("song"),
-              <SwiperSlide key={idx}>
-                <Song_card {...song} />
-              </SwiperSlide>
-            ))}
+            {releases.map(
+              (song, idx) => (
+                console.log("song"),
+                (
+                  <SwiperSlide key={idx}>
+                    <Song_card {...song} />
+                  </SwiperSlide>
+                )
+              )
+            )}
           </Swiper>
+        </section>
+        <section className="ID">
+          <h2 className="section-title">ID</h2>
+          <iframe
+            width="100%"
+            height="450"
+            allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2089388063&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=false&show_reposts=false&show_teaser=false"
+          ></iframe>
         </section>
       </div>
     );
