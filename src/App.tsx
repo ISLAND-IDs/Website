@@ -26,12 +26,20 @@ function App() {
         <Outlet />
       </main>
       <footer>
-        <div className="container">
-            <div className="footer-content">
-                <p data-ko="© 2025 ISLAND 레이블. 모든 권리 보유." data-en="© 2025 ISLAND Label. All Rights Reserved.">© 2025 ISLAND 레이블. 모든 권리 보유.</p>
-            </div>
+        <div className="footer-content">
+          <p className="social">
+            <a href="https://soundcloud.com/island-promotion" target="_blank">SoundCloud</a>·
+            <a href="https://discord.gg/B55PyFm7nW" target="_blank">Discord</a>·
+            <a href="https://instagram.com/island.ids" target="_blank">Instagram</a>
+          </p>
+          <p className="contact">
+            <a href="mailto:contact@islandlabel.com">contact@islandlabel.com</a>
+          </p>
+          <p className="license">
+            © 2025 ISLAND · MIT License
+          </p>
         </div>
-    </footer>
+      </footer>
     </div>
   );
 }
