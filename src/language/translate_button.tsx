@@ -14,7 +14,7 @@ i18n
         translation: ko,
       },
     },
-    lng: "ko-KR",
+    lng: "en-US",
     fallbackLng: {
       "ko-KR": ["ko-KR"],
       default: ["en-US"],
