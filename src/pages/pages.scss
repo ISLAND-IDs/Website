@@ -34,7 +34,7 @@
     .swiper-slide {
         background-position: center;
         background-size: cover;
-        width: 400px !important;
+        width: 300px !important;
     }
 }
 
@@ -46,7 +46,6 @@
     iframe {
         width: 80%;
         margin-left: 10%;
-        height: 1500px;
         border: none;
 
         @media (max-width: 768px) {

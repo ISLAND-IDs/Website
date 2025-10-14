@@ -10,7 +10,6 @@ import Text_Card from "../components/text_card";
 function HomePage(){
     //API를 써서 리스트 가져오기?
     const { t } = useTranslation();
-    console.log(releases);
     
     return (
       <div>
@@ -27,7 +26,7 @@ function HomePage(){
             centeredSlides={true}
             slidesPerView={"auto"}
             coverflowEffect={{
-              rotate: 50,
+              rotate: 30,
               stretch: 0,
               depth: 100,
               modifier: 1,
@@ -42,7 +41,7 @@ function HomePage(){
                 console.log("song"),
                 (
                   <SwiperSlide key={idx}>
-                    <Song_card {...song} />
+                    <Song_card {...song} index={idx}/>
                   </SwiperSlide>
                 )
               )
