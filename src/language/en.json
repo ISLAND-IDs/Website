@@ -14,5 +14,6 @@
     "support_desc":"Support for in-production tracks, feedback, collaboration opportunities",
     "label":"Label Transition",
     "label_desc":"We aim to become a label for growing artists",
-    "operators": "Operators"
+    "operators": "Operators",
+    "detail": "View Details"
 }
