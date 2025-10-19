@@ -5,6 +5,7 @@ import App from './App'; // 최상위 레이아웃 컴포넌트, 공통 레이�
 import HomePage from './pages/Home';
 import SubmitPage from './pages/id_submit';
 import About from './pages/about';
+import SongPage from './pages/song';
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
       { index: true, element: <HomePage/> },
       { path: 'submission', element: <SubmitPage /> },
       { path: 'about', element: <About/> },
+      { path: 'song/:id', element: <SongPage /> },
     ],
   },
 ]);

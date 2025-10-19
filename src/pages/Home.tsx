@@ -5,11 +5,11 @@ import 'swiper/swiper.css';
 import "./pages.scss";
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 import releases from '../releases.json';
+import Text_Card from "../components/text_card";
 
 function HomePage(){
     //API를 써서 리스트 가져오기?
     const { t } = useTranslation();
-    console.log(releases);
     
     return (
       <div>
@@ -19,15 +19,14 @@ function HomePage(){
             <p>{t("sub_title")}</p>
           </div>
         </section>
-        <section className="releases">
-          <h2 className="section-title">{t("releases")}</h2>
+        <Text_Card title={t("releases")}>
           <Swiper
             effect={"coverflow"}
             grabCursor={true}
             centeredSlides={true}
             slidesPerView={"auto"}
             coverflowEffect={{
-              rotate: 50,
+              rotate: 30,
               stretch: 0,
               depth: 100,
               modifier: 1,
@@ -42,22 +41,21 @@ function HomePage(){
                 console.log("song"),
                 (
                   <SwiperSlide key={idx}>
-                    <Song_card {...song} />
+                    <Song_card {...song} index={idx}/>
                   </SwiperSlide>
                 )
               )
             )}
           </Swiper>
-        </section>
-        <section className="ID">
-          <h2 className="section-title">ID</h2>
+        </Text_Card>
+        <Text_Card title="ID">
           <iframe
             width="100%"
             height="450"
             allow="autoplay"
             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2089388063&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=false&show_reposts=false&show_teaser=false"
           ></iframe>
-        </section>
+        </Text_Card>
       </div>
     );
 }
