@@ -157,7 +157,7 @@ footer {
         color: #aaa;
         text-decoration: none;
         transition: color 0.3s;
-    
+
         &:hover {
             color: #fff;
         }
@@ -166,5 +166,17 @@ footer {
     .social {
         margin-bottom: 10px;
         letter-spacing: 1px;
+    }
+
+    .social a svg {
+        color: inherit;
+        fill: currentColor;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    /* Ensure SVG fill updates when parent link is hovered */
+    .social a:hover svg {
+        fill: currentColor; /* currentColor will be #fff because parent a:hover sets color */
     }
 }

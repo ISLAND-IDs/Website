@@ -15,7 +15,7 @@ const router = createBrowserRouter([
       { index: true, element: <HomePage/> },
       { path: 'submission', element: <SubmitPage /> },
       { path: 'about', element: <About/> },
-      { path: 'song/:id', element: <SongPage /> }, // 나중에 SongDetail 컴포넌트로 교체
+      { path: 'song/:id', element: <SongPage /> },
     ],
   },
 ]);
