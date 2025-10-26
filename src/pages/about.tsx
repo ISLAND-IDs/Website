@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import MetaTag from "../components/metaTag";
 import Card from "../components/text_card";
 import "./pages.scss";
 
@@ -7,6 +8,7 @@ function About() {
 
     return (
         <div className="about">
+            <MetaTag title={"ISLAND · "+ t("about_island")} description={t("about_page_description")} keywords="about" imgsrc="../asset/icon.png" url="https://island-ids.netlify.app/about/"/>
             <Card title={t("about_island")}>
                 <p className="intro-text">
                     <strong>ISLAND IDs</strong>{t("what_is_ISLAND")}

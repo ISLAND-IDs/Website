@@ -1,10 +1,13 @@
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
 import { useState } from 'react';
+import { HelmetProvider } from 'react-helmet-async';
+
 import TranslateButton from './language/translate_button.tsx';
 import SoundCloudIcon from './components/soundcloud_icon';
-import './style.scss';
+
 import 'bootstrap-icons/font/bootstrap-icons.css'
+import './style.scss';
 
 function App() {
   const location = useLocation();
@@ -31,8 +34,9 @@ function App() {
         </nav>
       </header>
       <main>
-        {/* 현재 경로에 맞는 페이지(예: HomePage.tsx)가 이 위치에 렌더링됩니다. */}
-        <Outlet />
+        <HelmetProvider>
+          <Outlet />
+        </HelmetProvider>
       </main>
       <footer>
         <div className="footer-content">

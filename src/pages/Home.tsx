@@ -1,11 +1,14 @@
 import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectCoverflow, Pagination } from 'swiper/modules';
+
 import Song_card from "../components/song_card";
+import Text_Card from "../components/text_card";
+import MetaTag from "../components/metaTag";
+import releases from '../releases.json';
+
 import 'swiper/swiper.css';
 import "./pages.scss";
-import { EffectCoverflow, Pagination } from 'swiper/modules';
-import releases from '../releases.json';
-import Text_Card from "../components/text_card";
 
 function HomePage(){
     //API를 써서 리스트 가져오기?
@@ -13,6 +16,7 @@ function HomePage(){
     
     return (
       <div>
+        <MetaTag title="ISLAND-IDs" description={t("sub_title")} keywords="Main of ISLAND" imgsrc="../asset/icon.png" url="https://island-ids.netlify.app/"/>
         <section className="hero">
           <div className="hero-content">
             <h1>ISLAND</h1>

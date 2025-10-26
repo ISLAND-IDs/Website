@@ -15,5 +15,8 @@
     "label":"Label Transition",
     "label_desc":"We aim to become a label for growing artists",
     "operators": "Operators",
-    "detail": "View Details"
+    "detail": "View Details",
+    "about_page_description": "This is the about page for ISLAND. Learn about ISLAND's mission, activities, and operators.",
+    "submit_id_page_description": "This is the ID submission page for ISLAND. Submit your ID tracks here.",
+    "song_page_description": "This page is the song page for ISLAND. Check out detailed information about the song."
 }
