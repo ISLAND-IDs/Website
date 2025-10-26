@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 
 function SubmitPage() {
   const containerRef = useRef<HTMLIFrameElement | null>(null);
-  const [height, setHeight] = useState(1500);
+  const [height, setHeight] = useState(1700);
 
   useEffect(() => {
     const iframe = containerRef.current;
@@ -10,7 +10,7 @@ function SubmitPage() {
 
     if (iframe && width != undefined){
       if (width < 600) {
-        setHeight(1500 + (600 - width));
+        setHeight(1700 + (600 - width));
       }
     }
   }, []);
