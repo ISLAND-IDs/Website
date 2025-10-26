@@ -1,12 +1,17 @@
-import releases from '../releases.json';
+import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
+import MetaTag from "../components/metaTag";
+import releases from '../releases.json';
 import './pages.scss';
 
 function SongPage() {
     const { id } = useParams();
     const song = releases[id as unknown as number]; // string을 number로 변환해야 함
+    const { t } = useTranslation();
+
     return (
         <div className='song'>
+            <MetaTag title={"ISLAND · "+ song.Song_Name} description={t("song_page_description")} keywords="song" imgsrc={song.Cover_Art} url={"https://island-ids.netlify.app/song/"+ id}/>
             <div className='album-card'>
                 <img className="album-cover" src={song.Cover_Art} alt={song.Song_Name} />
                 <div className="album-info">

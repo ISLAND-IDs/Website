@@ -15,5 +15,8 @@
     "label":"음반사로 전환",
     "label_desc":"성장하는 아티스트를 위한 음반사화 추진",
     "operators": "운영진",
-    "detail": "더 알아보기"
+    "detail": "더 알아보기",
+    "about_page_description": "ISLAND에 대한 소개 페이지입니다. ISLAND의 사명, 활동 및 운영진에 대해 알아보세요.",
+    "submit_id_page_description": "ISLAND에 ID 제출 페이지입니다. 여기를 통해 당신의 ID 트랙을 제출하세요.",
+    "song_page_description": "이 페이지는 ISLAND의 곡 페이지입니다. 곡에 대한 자세한 정보를 확인하세요."
 }
