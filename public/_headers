@@ -1,0 +1,6 @@
+/*
+  X-Robots-Tag: index, follow
+  Cache-Control: public, max-age=3600
+  Referrer-Policy: strict-origin-when-cross-origin
+  Content-Security-Policy: default-src 'self' https:;
+  Permissions-Policy: geolocation=(), microphone=(), camera=()

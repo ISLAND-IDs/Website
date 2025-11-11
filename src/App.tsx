@@ -45,7 +45,11 @@ function App() {
               <SoundCloudIcon style={{ width: '14px', height: '14px', verticalAlign: 'middle' }} />
             </a>·
             <a href="https://discord.gg/B55PyFm7nW" target="_blank"><i className="bi bi-discord"></i></a>·
-            <a href="https://instagram.com/island.ids" target="_blank"><i className="bi bi-instagram"></i></a>
+            <a href="https://instagram.com/island.ids" target="_blank"><i className="bi bi-instagram"></i></a>·
+            <a href="https://github.com/ISLAND-IDs" target="_blank"><i className="bi bi-github"></i></a>
+          </p>
+          <p className='contact-mail'>
+            Contact: <a href="mailto:island.id.record@gmail.com"> island.id.record@gmail.com</a>
           </p>
           <p className="license">
             © 2025 ISLAND · MIT License
