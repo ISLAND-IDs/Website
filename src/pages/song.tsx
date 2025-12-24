@@ -6,7 +6,8 @@ import './pages.scss';
 
 function SongPage() {
     const { id } = useParams();
-    const song = releases[id as unknown as number]; // string을 number로 변환해야 함
+    const idx = Number(id);
+    const song = releases[idx];
     const { t } = useTranslation();
 
     return (
