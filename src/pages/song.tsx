@@ -6,7 +6,7 @@ import './pages.scss';
 
 function SongPage() {
     const { id } = useParams();
-    const idx = Number(id);
+    const idx = releases.length - Number(id);
     const song = releases[idx];
     const { t } = useTranslation();
 

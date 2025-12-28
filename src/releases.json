@@ -1,15 +1,5 @@
 [
     {
-        "Song_Name": "Dance VIP",
-        "Artist_Name": "rrayy",
-        "Cover_Art": "https://i1.sndcdn.com/artworks-iaMIZrXjJXGWNzuz-MkkI4g-t1080x1080.jpg",
-        "Platforms" : {
-            "SoundCloud": "https://soundcloud.com/rrayy-25809/dance-vip-mix",
-            "Spotify": "https://open.spotify.com/track/3uPAiH1VDa0GghVW5cNYn6?si=d4d8b9eeaea94e82",
-            "AppleMusic": "https://music.apple.com/us/album/1842664455?i=1842664456"
-        }
-    },
-    {
         "Song_Name": "Dance VIP (Extended Mix)",
         "Artist_Name": "rrayy",
         "Cover_Art": "https://i1.sndcdn.com/artworks-iaMIZrXjJXGWNzuz-MkkI4g-t1080x1080.jpg",
@@ -17,6 +7,16 @@
             "SoundCloud": "https://soundcloud.com/rrayy-25809/dance-vip-extended-mix",
             "Spotify": "https://open.spotify.com/track/7KCsdZb0spDTSn91USJxSt?si=88910dc443db4339",
             "AppleMusic": "https://music.apple.com/us/album/1842664455?i=1842664457"
+        }
+    },
+    {
+        "Song_Name": "Dance VIP",
+        "Artist_Name": "rrayy",
+        "Cover_Art": "https://i1.sndcdn.com/artworks-iaMIZrXjJXGWNzuz-MkkI4g-t1080x1080.jpg",
+        "Platforms" : {
+            "SoundCloud": "https://soundcloud.com/rrayy-25809/dance-vip-mix",
+            "Spotify": "https://open.spotify.com/track/3uPAiH1VDa0GghVW5cNYn6?si=d4d8b9eeaea94e82",
+            "AppleMusic": "https://music.apple.com/us/album/1842664455?i=1842664456"
         }
     },
     {
