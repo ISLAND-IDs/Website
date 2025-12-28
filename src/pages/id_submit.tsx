@@ -19,7 +19,7 @@ function SubmitPage() {
   }, []);
 
   return (
-    <div className="submit_form">
+    <div className="submit_form" style={{"backgroundColor": "azure"}}>
       <MetaTag title={"ISLAND · "+ t("submit_id")} description={t("submit_id_page_description")} keywords="submit" imgsrc="../asset/icon.png" url="https://island-ids.netlify.app/submission/"/>
       <iframe
       src="https://docs.google.com/forms/d/e/1FAIpQLSetYQu8xbPS9Ndz5ncRogDczAnL6vlLbrNPz-b4qDq9TiDSVw/viewform?embedded=true"

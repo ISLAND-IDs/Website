@@ -11,6 +11,7 @@ import SubmitPage from './pages/id_submit';
 import DemoPage from './pages/Demo_submit';
 import About from './pages/about';
 import SongPage from './pages/song';
+import Contract from './pages/contract';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
       { path: 'submission', element: <SubmitPage /> },
       { path: 'demo', element: <DemoPage /> },
       { path: 'about', element: <About/> },
+      { path: 'contract', element: <Contract/> },
       { path: 'song/:id', element: <SongPage /> },
     ],
   },

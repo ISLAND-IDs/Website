@@ -19,10 +19,10 @@ function DemoPage() {
   }, []);
 
   return (
-    <div className="submit_form">
+    <div className="submit_form" style={{"backgroundColor": "#e4f3e5"}}>
       <MetaTag title={"ISLAND · "+ t("submit_demo")} description={t("submit_demo_page_description")} keywords="submit" imgsrc="../asset/icon.png" url="https://island-ids.netlify.app/demo/"/>
       <iframe
-      src="" // TODO: Add demo submission Google form link here
+      src="https://docs.google.com/forms/d/e/1FAIpQLSfrqx6XdomSSxBG6DaL-9FLyrm7kaxxz0UI9QyUQeoB-qCwSg/viewform?usp=header"
       ref={containerRef}
        style={{
           height: `${height}px`
