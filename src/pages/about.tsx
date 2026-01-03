@@ -41,7 +41,7 @@ function About() {
                     </div>
                     <div className="team-section">
                         <div className="team-role">A&R Team</div>
-                        <a className="team-member" href="https://linktr.ee/speedymusic" target='_blank'>🎵 Speedy</a>
+                        <a className="team-member" href="https://linktr.ee/nune01_" target='_blank'>🎵 Nune</a>
                         <a className="team-member" href="https://music.hexa.cat/" target='_blank'>🎵 hexa.cat</a>
                     </div>
                     <div className="team-section">

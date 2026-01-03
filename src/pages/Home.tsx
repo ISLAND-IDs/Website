@@ -13,6 +13,7 @@ import "./pages.scss";
 function HomePage(){
     //API를 써서 리스트 가져오기?
     const { t } = useTranslation();
+    const length = releases.length
     
     return (
       <div>
@@ -42,10 +43,9 @@ function HomePage(){
           >
             {releases.map(
               (song, idx) => (
-                console.log("song"),
                 (
                   <SwiperSlide key={idx}>
-                    <Song_card {...song} index={idx}/>
+                    <Song_card {...song} index={length - idx}/>
                   </SwiperSlide>
                 )
               )

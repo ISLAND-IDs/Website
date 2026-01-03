@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import MetaTag from "../components/metaTag";
 
-function SubmitPage() {
+function DemoPage() {
   const containerRef = useRef<HTMLIFrameElement | null>(null);
   const [height, setHeight] = useState(1700);
   const { t } = useTranslation();
@@ -19,10 +19,10 @@ function SubmitPage() {
   }, []);
 
   return (
-    <div className="submit_form" style={{"backgroundColor": "azure"}}>
-      <MetaTag title={"ISLAND · "+ t("submit_id")} description={t("submit_id_page_description")} keywords="submit" imgsrc="../asset/icon.png" url="https://island-ids.netlify.app/submission/"/>
+    <div className="submit_form" style={{"backgroundColor": "#e4f3e5"}}>
+      <MetaTag title={"ISLAND · "+ t("submit_demo")} description={t("submit_demo_page_description")} keywords="submit" imgsrc="../asset/icon.png" url="https://island-ids.netlify.app/demo/"/>
       <iframe
-      src="https://docs.google.com/forms/d/e/1FAIpQLSetYQu8xbPS9Ndz5ncRogDczAnL6vlLbrNPz-b4qDq9TiDSVw/viewform?embedded=true"
+      src="https://docs.google.com/forms/d/e/1FAIpQLSfrqx6XdomSSxBG6DaL-9FLyrm7kaxxz0UI9QyUQeoB-qCwSg/viewform?usp=header"
       ref={containerRef}
        style={{
           height: `${height}px`
@@ -34,4 +34,4 @@ function SubmitPage() {
   );
 }
 
-export default SubmitPage;
+export default DemoPage;
