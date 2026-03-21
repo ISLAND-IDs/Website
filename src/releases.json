@@ -2,7 +2,7 @@
     {
         "Song_Name": "Stay with Me (Extended Mix)",
         "Artist_Name": "rrayy",
-        "Cover_Art": "./Stay_with_Me_cover.png",
+        "Cover_Art": "/Stay_with_Me_cover.png",
         "Platforms" : {
             "SoundCloud": "https://soundcloud.com/rrayy-25809/stay-with-me-extended-mix-2",
             "Spotify": "https://open.spotify.com/track/6F84CVb0AyyJxR5qKbxe8F?si=a188e35457a34fec",
@@ -13,7 +13,7 @@
     {
         "Song_Name": "Stay with Me",
         "Artist_Name": "rrayy",
-        "Cover_Art": "./Stay_with_Me_cover.png",
+        "Cover_Art": "/Stay_with_Me_cover.png",
         "Platforms" : {
             "SoundCloud": "https://soundcloud.com/rrayy-25809/stay-with-me-1",
             "Spotify": "https://open.spotify.com/track/6o7fTc8LU2IfRRyCs5ga8n?si=6ee7fe7779e64c9d",
