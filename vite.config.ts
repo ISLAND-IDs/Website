@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [
     react(),
     prerender({
-      routes: ["/", "/submission", "/about", "/demo", "/about"],
+      routes: ["/submission", "/about", "/demo", "/contract"],
       renderer: "@prerenderer/renderer-puppeteer",
       server: {
         port: 5173,

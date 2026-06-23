@@ -16,7 +16,9 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    window.dispatchEvent(new Event('render-event'));
+    const event = new Event('render-event');
+    document.dispatchEvent(event);
+    window.dispatchEvent(event);
   }, []);
 
   return (
