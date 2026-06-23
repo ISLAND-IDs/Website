@@ -22,6 +22,8 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",
+    "@prerenderer/renderer-puppeteer": "^1.2.4",
+    "@prerenderer/rollup-plugin": "^0.3.12",
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
     "@types/swiper": "^5.4.3",
@@ -31,6 +33,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
+    "puppeteer": "^25.2.0",
     "sass-embedded": "^1.93.0",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.61.0",

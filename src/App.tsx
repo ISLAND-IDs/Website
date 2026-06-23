@@ -1,6 +1,6 @@
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 
 import TranslateButton from './language/translate_button.tsx';
@@ -15,6 +15,10 @@ function App() {
   const path = location.pathname;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  useEffect(() => {
+    window.dispatchEvent(new Event('render-event'));
+  }, []);
+
   return (
     <div>
       <header>
@@ -28,6 +32,7 @@ function App() {
           <div className={`nav-menu${isMenuOpen ? ' active' : ''}`}>
             <Link to="/" className={"nav-link "+(path=="/"?"active":"")} onClick={() => setIsMenuOpen(false)}>{t("home")}</Link>
             <Link to="/submission" className={"nav-link "+(path=="/submission"?"active":"")} onClick={() => setIsMenuOpen(false)}>{t("submit_id")}</Link>
+            {/* <Link to="/remix-contest" className={"nav-link "+(path=="/remix-contest"?"active":"")} onClick={() => setIsMenuOpen(false)}>{t("remix_contest")}</Link> */}
             <Link to="/about" className={"nav-link "+(path=="/about"?"active":"")} onClick={() => setIsMenuOpen(false)}>{t("about_island")}</Link>
             <TranslateButton></TranslateButton>
           </div>
