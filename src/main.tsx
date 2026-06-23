@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 
 // 최상위 레이아웃 컴포넌트, 공통 레이아웃
 import App from './App';
@@ -12,6 +13,7 @@ import DemoPage from './pages/Demo_submit';
 import About from './pages/about';
 import SongPage from './pages/song';
 import Contract from './pages/contract';
+// import RemixContestPage from './pages/remix_contest';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,7 @@ const router = createBrowserRouter([
       { path: 'demo', element: <DemoPage /> },
       { path: 'about', element: <About/> },
       { path: 'contract', element: <Contract/> },
+      // { path: 'remix-contest', element: <RemixContestPage /> },
       { path: 'song/:id', element: <SongPage /> },
     ],
   },
@@ -31,6 +34,8 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <HelmetProvider>
+      <RouterProvider router={router} />
+    </HelmetProvider>
   </React.StrictMode>
 );
